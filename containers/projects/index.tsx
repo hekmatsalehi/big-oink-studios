@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectItem from './projectItem';
 
 
-const Portfolio = () => {
+const Projects = () => {
   return (
     <div>
         <ProjectItem/>
@@ -10,4 +10,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio;
+export default Projects;

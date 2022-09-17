@@ -9,14 +9,14 @@ import Slider from '../containers/home/slider';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar/>
       <Hero/>
       <FeaturedProject/>
       <Slider/>
       <Contact/>
       <Footer/>
-    </div>
+    </>
   )
 }
 

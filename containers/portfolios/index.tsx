@@ -4,7 +4,7 @@ import PortfolioItems from './portfolioItems';
 
 const Portfolios = () => {
   return (
-    <div>
+    <div className="w-full bg-stone-800">
         <PortfolioItems/>
     </div>
   )

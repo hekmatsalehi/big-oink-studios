@@ -1,4 +1,5 @@
 import React from "react";
+import ContactButton from "../../../components/contactButton";
 
 const FeaturedProject = () => {
   return (
@@ -14,9 +15,7 @@ const FeaturedProject = () => {
             Done. Need your room cleaned? We got you. Want your biggest
             competitor to accidentally wander into traffic? Say no more.{" "}
           </p>
-          <button className="w-fit bg-[#74BFC4] text-[#FFFFFF] font-medium px-5 py-2 cursor-pointer">
-            CONTACT US
-          </button>
+          <ContactButton/>
         </div>
         <div className="bg-[#474747] p-7 py-8 flex justify-center items-center flex-col gap-3 max-h-[340px]      ">
           <h2 className="text-xl font-semibold">SEE WHAT WE’VE BEEN UP TO:</h2>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = ({ type }) => {
@@ -10,18 +11,22 @@ const Navbar = ({ type }) => {
       }
     >
       <div className="container mx-auto py-4 flex items-center justify-between">
-        <span className="text-2xl font-semibold uppercase">
-          {type === "home" ? "Noble Ocean Media" : "Big Oink Studios"}
-        </span>
-        <span
-          className={
-            type === "home"
-              ? "text-xl uppercase"
-              : "text-xl uppercase text-[#74BFC4]"
-          }
-        >
-          Portfolio
-        </span>
+        <Link href="/">
+          <span className="text-2xl font-bold uppercase cursor-pointer">
+            {type === "home" ? "Noble Ocean Media" : "Big Oink Studios"}
+          </span>
+        </Link>
+        <Link href="/portfolio">
+          <span
+            className={
+              type === "home"
+                ? "text-sm font-semibold  uppercase cursor-pointer hover:text-[#74BFC4] ease-out duration-200"
+                : "text-sm font-semibold uppercase cursor-pointer text-[#74BFC4] hover:text-inherit ease-out duration-200"
+            }
+          >
+            Portfolio
+          </span>
+        </Link>
       </div>
     </nav>
   );

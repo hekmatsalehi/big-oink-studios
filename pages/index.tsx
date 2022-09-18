@@ -15,7 +15,7 @@ const Home = () => {
       <FeaturedProject/>
       <Slider/>
       <Contact/>
-      <Footer/>
+      <Footer type="home"/>
     </>
   )
 }

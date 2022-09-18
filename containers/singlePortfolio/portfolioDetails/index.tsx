@@ -1,35 +1,48 @@
 import React from "react";
 import ContactButton from "../../../components/contactButton";
 
-const PortfolioDetails = () => {
+const PortfolioDetails = ({ project }: any) => {
+  const tags = project.tags.split(",");
+  
+  const generateColor = (tag:string) => {
+    let bgColor = "bg-[#74BFC4]"
+    let textColor = "text-white"
+    switch (tag) {
+      case "BUSINESS":
+        bgColor = "bg-[#004A5B]"
+        break;
+      case "MUSIC VIDEO":
+        bgColor = "bg-[#EBF0F6]"
+        textColor = "text-[#2D2D2D]"
+        break;
+      case "WEDDING":
+        bgColor = "bg-[#ED254E]"
+        break;
+      case "RECEPTION":
+        bgColor = "bg-[#74BFC4]"
+        textColor = "text-[#2D2D2D]"
+        break;
+      default: 
+        bgColor = bgColor
+        textColor = textColor
+    }
+    return [bgColor, textColor];
+  }
+
   return (
     <div className="w-4/6 flex flex-col gap-5 mt-5">
       <div className="w-full text-[8px] font-normal ">
-        <button className="py-1 px-2 mr-4 text-[#F3F3F3] bg-rose-600 rounded-[10px]">
-          WEDDING
-        </button>
-        <button className="py-1 px-2 text-[#2D2D2D] bg-cyan-300  rounded-[10px]">
-          RECEPTION
-        </button>
+        {tags.map((tag: any, index: number) => (
+          <button
+            key={index}
+            className={`py-1 px-2 mr-4 ${generateColor(tag)[1]} ${generateColor(tag)[0]} rounded-[10px]`}
+          >
+            {tag}
+          </button>
+        ))}
       </div>
-      <h1 className="text-3xl font-bold  text-[#F3F3F3]">John & Jane Smith</h1>
-      <p className="text-[17px] text-[#D6D6D6]">
-        Meh mixtape subway tile tousled cred cloud bread mumblecore. Wayfarers
-        jianbing street art, neutra paleo dreamcatcher cold-pressed beard
-        unicorn selvage. Pour-over edison bulb locavore, neutra glossier
-        helvetica authentic. Freegan pickled celiac master cleanse bushwick,
-        green juice helvetica mlkshk wayfarers listicle selvage. Beard slow-carb
-        post-ironic, migas lomo kinfolk vice kogi blue bottle. Bitters pitchfork
-        offal listicle kickstarter fashion axe keffiyeh small batch. Vegan
-        pinterest brunch disrupt hexagon 3 wolf moon shabby chic artisan
-        truffaut prism. Kinfolk single-origin coffee pitchfork normcore four
-        dollar toast. Hella prism tacos wolf lo-fi. Raclette bicycle rights
-        keytar tumblr austin gastropub schlitz kombucha. Slow-carb squid kogi
-        banh mi freegan heirloom hashtag. Street art taiyaki tumeric next level
-        gastropub echo park. Art party pop-up pinterest occupy listicle squid
-        chia fixie. Fam umami godard YOLO, waistcoat art party blog fixie pok
-        pok hexagon fingerstache knausgaard.
-      </p>
+      <h1 className="text-3xl font-bold  text-[#F3F3F3]">{project.title}</h1>
+      <div className="text-[17px] text-[#D6D6D6]">{project.content}</div>
       <ContactButton />
     </div>
   );

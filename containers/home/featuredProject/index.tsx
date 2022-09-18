@@ -1,7 +1,7 @@
 import React from "react";
 import ContactButton from "../../../components/contactButton";
 
-const FeaturedProject = () => {
+const FeaturedProject = ({project}:any) => {
   return (
     <div className="w-full bg-stone-800 text-slate-100 py-20 ">
       <div className="container mx-auto flex gap-20 text-[#F3F3F3]">
@@ -28,7 +28,7 @@ const FeaturedProject = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
           <p className="text-[15px] font-normal">
-            John and Jane Smith Wedding Video
+            {project.title}
           </p>
         </div>
       </div>

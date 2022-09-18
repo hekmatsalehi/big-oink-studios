@@ -5,13 +5,14 @@ import Footer from '../containers/footer';
 import Hero from '../containers/home/hero';
 import Navbar from '../containers/navbar';
 import Slider from '../containers/home/slider';
+import { getSingleProject } from '../datocms/queries';
 
-const Home = () => {
+const Home = ({project}:any) => {
   return (
     <>
       <Navbar type="home"/>
       <Hero/>
-      <FeaturedProject/>
+      <FeaturedProject project={project} />
       <Slider/>
       <Contact/>
       <Footer type="home"/>
@@ -19,4 +20,12 @@ const Home = () => {
   )
 }
 
+export const getStaticProps = async () => {
+  const singleProject = await getSingleProject("Horrible Design Promo");
+  return {
+    props: {
+      project: singleProject.project
+    }
+  }
+}
 export default Home;

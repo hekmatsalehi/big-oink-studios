@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = ({ type }) => {
+const Footer = ({ type }: any) => {
   return (
     <footer className="w-full bg-[#111111] text-slate-100">
       <div className="container mx-auto pt-11 pb-12 flex items-end  justify-between">

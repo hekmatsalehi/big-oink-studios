@@ -1,6 +1,9 @@
 import React from "react";
 
 const PortfolioVideo = ({ project }: any) => {
+  if(!project) {
+    return null;
+  }
   return (
     <div className="w-4/6 h-[600px]">
       <iframe

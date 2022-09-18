@@ -2,6 +2,9 @@ import React from "react";
 import ContactButton from "../../../components/contactButton";
 
 const FeaturedProject = ({project}:any) => {
+  if(!project) {
+    return null;
+  }
   return (
     <div className="w-full bg-stone-800 text-slate-100 py-20 ">
       <div className="container mx-auto flex gap-20 text-[#F3F3F3]">

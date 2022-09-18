@@ -2,6 +2,9 @@ import React from "react";
 import ContactButton from "../../../components/contactButton";
 
 const PortfolioDetails = ({ project }: any) => {
+  if(!project) {
+    return null;
+  }
   const tags = project.tags.split(",");
   
   const generateColor = (tag:string) => {

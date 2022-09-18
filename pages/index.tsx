@@ -8,6 +8,7 @@ import Slider from '../containers/home/slider';
 import { getSingleProject } from '../datocms/queries';
 
 const Home = ({project}:any) => {
+
   return (
     <>
       <Navbar type="home"/>

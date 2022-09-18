@@ -6,16 +6,15 @@ import Hero from '../containers/home/hero';
 import Navbar from '../containers/navbar';
 import Slider from '../containers/home/slider';
 
-
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar type="home"/>
       <Hero/>
       <FeaturedProject/>
       <Slider/>
       <Contact/>
-      <Footer/>
+      <Footer type="home"/>
     </>
   )
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -17,10 +18,11 @@ const PortfolioItems = ({ allProjects }: any) => {
               }
             >
               <div className="w-1/2 ">
-                <img
-                  className="w-full object-cover"
+                <Image
+                  width="500px"
+                  height="400px"
                   src={project.image.url}
-                ></img>
+                />
               </div>
               <div className="w-1/2 p-8">
                 <h1 className="text-3xl font-bold text-[#F3F3F3] ">

@@ -7,7 +7,9 @@ import { getAllProjects, getSingleProject } from '../../datocms/queries';
 
 
 const SinglePortfolio = ({project}:any) => {
-
+  if(!project) {
+    return null;
+  }
 
   return (
     <>

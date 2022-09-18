@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const portfolios = [
@@ -30,27 +31,29 @@ const PortfolioItems = () => {
   return (
     <div className="container mx-auto py-10">
       {portfolios.map((portfolio, index) => (
-        <div
-          key={index}
-          className={
-            // Alternate image and text
-            index % 2 === 0
-              ? "flex items-center cursor-pointer"
-              : "flex text-right flex-row-reverse items-center cursor-pointer"
-          }
-        >
-          <div className="w-1/2 ">
-            <img className="w-full object-cover" src={portfolio.img}></img>
+        <Link href="/portfolio/:id">
+          <div
+            key={index}
+            className={
+              // Alternate image and text
+              index % 2 === 0
+                ? "flex items-center cursor-pointer"
+                : "flex text-right flex-row-reverse items-center cursor-pointer"
+            }
+          >
+            <div className="w-1/2 ">
+              <img className="w-full object-cover" src={portfolio.img}></img>
+            </div>
+            <div className="w-1/2 p-8">
+              <h1 className="text-3xl font-bold text-[#F3F3F3] ">
+                {portfolio.title}
+              </h1>
+              <p className="text-[17px] text-[#D6D6D6] mt-3">
+                {portfolio.details}
+              </p>
+            </div>
           </div>
-          <div className="w-1/2 p-8">
-            <h1 className="text-3xl font-bold text-[#F3F3F3] ">
-              {portfolio.title}
-            </h1>
-            <p className="text-[17px] text-[#D6D6D6] mt-3">
-              {portfolio.details}
-            </p>
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

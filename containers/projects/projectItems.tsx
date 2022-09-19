@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { generateColor } from "../../utils/generateColor";
 
 const ProjectItems = ({ allProjects }: any) => {
   const projects = allProjects.allProjects;
@@ -46,6 +45,31 @@ const ProjectItems = ({ allProjects }: any) => {
       </div>
     </div>
   );
+};
+
+function generateColor(tag: string) {
+  let bgColor = "bg-[#74BFC4]";
+  let textColor = "text-white";
+  switch (tag) {
+    case "BUSINESS":
+      bgColor = "bg-[#004A5B]";
+      break;
+    case "MUSIC VIDEO":
+      bgColor = "bg-[#EBF0F6]";
+      textColor = "text-[#2D2D2D]";
+      break;
+    case "RECEPTION":
+      textColor = "text-[#2D2D2D]";
+      bgColor = "bg-[#74BFC4]";
+      break;
+    case "WEDDING":
+      bgColor = "bg-[#ED254E]";
+      break;
+    default:
+      bgColor = bgColor;
+      textColor = textColor;
+  }
+  return [bgColor, textColor];
 };
 
 export default ProjectItems;

@@ -19,6 +19,9 @@ export const SINGLE_PROJECT_QUERY = `query GETSINGLEPROJECT($title: String) {
         video {
             url
         }
+        image {
+          url
+        }
         content
         tags
         id

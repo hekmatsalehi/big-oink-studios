@@ -6,7 +6,7 @@ const Navbar = ({ type }: any) => {
     <nav
       className={
         type === "home"
-          ? "w-full sticky top-0 z-10 bg-stone-800 text-slate-100"
+          ? "w-full sticky top-0 z-30 bg-stone-800 text-slate-100"
           : "w-full border-b-[1px] border-[#626262] sticky top-0 z-10 bg-stone-800 text-slate-100"
       }
     >

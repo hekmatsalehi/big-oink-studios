@@ -65,7 +65,7 @@ const Slider = () => {
           key={index}
           className="w-[220px] h-[220px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[360px] flex flex-col justify-center items-center p-10 bg-[#474747]"
         >
-          <span className="text-[#FFFFFF] text-[16px] md:text-[20px] lg:text-[25px] font-bold">
+          <span className="text-[#FFFFFF] text-[16px] md:text-[20px] lg:text-[25px] font-bold font-['Didot']">
             {data.post}
           </span>
           <span className="text-[#D6D6D6] text-[10px] md:text-[12px] lg:text-[17px] font-light mt-2 mr-20">

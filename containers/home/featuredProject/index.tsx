@@ -9,7 +9,7 @@ const FeaturedProject = ({ project }: any) => {
     <div className="w-full bg-stone-800 text-slate-100 py-20 ">
       <div className="container mx-auto flex flex-col md:flex-row lg:flex-row xl:flex-row gap-20 text-[#F3F3F3]">
         <div className="flex flex-col gap-7">
-          <h2 className="text-5xl font-bold">
+          <h2 className="text-5xl font-bold font-['Didot']">
             Working hard, playing hard, resting hard
           </h2>
           <p className="text-xl font-normal">

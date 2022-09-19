@@ -7,7 +7,7 @@ const Contact = () => {
         <h2 className="text-[30px] pb-5 text-[#FFFFFF] font-bold font-['Didot']">
           We’d love to hear from you!
         </h2>
-        <form className="flex flex-col ml-24 gap-4 text-[#FFFFFF] font-semibold text-[15px] ">
+        <form className="flex flex-col ml-24 gap-4 text-[#FFFFFF] font-semibold text-[15px]  ">
           <div className="flex w-3/4 gap-5">
             <div className="flex flex-col w-3/4 gap-1">
               <label className="" htmlFor="name">

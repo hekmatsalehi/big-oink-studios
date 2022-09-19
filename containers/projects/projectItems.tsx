@@ -22,7 +22,7 @@ const ProjectItems = ({ allProjects }: any) => {
                 <Image width="560" height="360" src={project.image.url} alt={project.title} />
               </div>
               <div className="w-1/2 p-8">
-                <h1 className="text-3xl font-bold text-[#F3F3F3] ">
+                <h1 className="text-3xl font-bold text-[#F3F3F3] font-['Didot'] ">
                   {project.title}
                 </h1>
                 <p className="text-[17px] text-[#D6D6D6] mt-4">
@@ -47,6 +47,7 @@ const ProjectItems = ({ allProjects }: any) => {
   );
 };
 
+// Alternate background and text color for project tags
 function generateColor(tag: string) {
   let bgColor = "bg-[#74BFC4]";
   let textColor = "text-white";

@@ -19,13 +19,14 @@ const ProjectDetails = ({ project }: any) => {
           </button>
         ))}
       </div>
-      <h1 className="text-3xl font-bold  text-[#F3F3F3]">{project.title}</h1>
+      <h1 className="text-3xl font-bold  text-[#F3F3F3] font-['Didot']">{project.title}</h1>
       <div className="text-[17px] text-[#D6D6D6]">{project.content}</div>
       <ContactButton />
     </div>
   );
 };
 
+// Alternate background and text color for project tags
 function generateColor(tag: string) {
   let bgColor = "bg-[#74BFC4]";
   let textColor = "text-white";

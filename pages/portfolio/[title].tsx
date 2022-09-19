@@ -29,7 +29,6 @@ export const getStaticPaths = async () => {
   allProjects.allProjects.map((project: any) => {
     paths.push(`/portfolio/${project.title}`);
   });
-  console.log("path", paths);
   return { paths, fallback: true };
 };
 

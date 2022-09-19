@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { sliderData } from "../../../utils/sliderData";
 
 const responsive = {
   desktop: {
@@ -8,7 +9,7 @@ const responsive = {
       min: 1400,
     },
     items: 3,
-    slidesToSlide: 2,
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: {
@@ -21,7 +22,7 @@ const responsive = {
   tablet: {
     breakpoint: {
       max: 1400,
-      min: 768,
+      min: 1090,
     },
     items: 2,
     slidesToSlide: 1,
@@ -59,36 +60,19 @@ const Slider = () => {
       sliderClass=""
       slidesToSlide={1}
     >
-      <div className="w-[360] h-[360px]">
-        <img
-          className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        />
-      </div>
-      <div className="w-[360] h-[360px]">
-        <img
-          className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        />
-      </div>
-      <div className="w-[360] h-[360px]">
-        <img
-          className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1663183539592-1a769606c069?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-        />
-      </div>
-      <div className="w-[360] h-[360px]">
-        <img
-          className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-        />
-      </div>
-      <div className="w-[360] h-[360px]">
-        <img
-          className="w-full h-full object-cover"
-          src="https://media.istockphoto.com/photos/glacial-mountain-garibaldi-lake-with-turquoise-water-in-the-middle-of-picture-id1244372877?b=1&k=20&m=1244372877&s=170667a&w=0&h=6hfucMB9SGJyI5zlXQwUtr-Duoi_8FSul4NMTwTgD7w="
-        />
-      </div>
+      {sliderData.map((data, index) => (
+        <div
+          key={index}
+          className="w-[220px] h-[220px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[360px] flex flex-col justify-center items-center p-10 bg-[#474747]"
+        >
+          <span className="text-[#FFFFFF] text-[16px] md:text-[20px] lg:text-[25px] font-bold">
+            {data.post}
+          </span>
+          <span className="text-[#D6D6D6] text-[10px] md:text-[12px] lg:text-[17px] font-light mt-2 mr-20">
+            - {data.author}.
+          </span>
+        </div>
+      ))}
     </Carousel>
   );
 };

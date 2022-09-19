@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Logo from "../logo";
+import OtherPageLogo from "../otherPageLogo";
 
 const Navbar = ({ type }: any) => {
   return (
@@ -13,7 +15,7 @@ const Navbar = ({ type }: any) => {
       <div className="container mx-auto py-4 flex items-center justify-between">
         <Link href="/">
           <span className="text-2xl font-bold uppercase cursor-pointer">
-            {type === "home" ? "Noble Ocean Media" : "Big Oink Studios"}
+            {type === "home" ? <Logo /> : <OtherPageLogo />}
           </span>
         </Link>
         <Link href="/portfolio">

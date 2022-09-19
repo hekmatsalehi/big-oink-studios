@@ -5,9 +5,9 @@ const ProjectVideo = ({ project }: any) => {
     return null;
   }
   return (
-    <div className="w-4/6 h-[600px]">
+    <div className="w-4/6 ">
       <iframe
-        className="w-full h-full"
+        className="w-full h-[270px] md:h-[400px] lg:h-[500px] xl:h-[600px]"
         src="https://www.youtube.com/embed/K4TOrB7at0Y"
         title={project.title}
         frameBorder="0"

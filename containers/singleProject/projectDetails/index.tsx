@@ -1,5 +1,6 @@
 import React from "react";
 import ContactButton from "../../../components/contactButton";
+import { generateColor } from "../../../utils/generateColor";
 
 const ProjectDetails = ({ project }: any) => {
   if(!project) {
@@ -7,31 +8,6 @@ const ProjectDetails = ({ project }: any) => {
   }
   const tags = project.tags.split(",");
   
-  const generateColor = (tag:string) => {
-    let bgColor = "bg-[#74BFC4]"
-    let textColor = "text-white"
-    switch (tag) {
-      case "BUSINESS":
-        bgColor = "bg-[#004A5B]"
-        break;
-      case "MUSIC VIDEO":
-        bgColor = "bg-[#EBF0F6]"
-        textColor = "text-[#2D2D2D]"
-        break;
-      case "WEDDING":
-        bgColor = "bg-[#ED254E]"
-        break;
-      case "RECEPTION":
-        bgColor = "bg-[#74BFC4]"
-        textColor = "text-[#2D2D2D]"
-        break;
-      default: 
-        bgColor = bgColor
-        textColor = textColor
-    }
-    return [bgColor, textColor];
-  }
-
   return (
     <div className="w-4/6 flex flex-col gap-5 mt-5">
       <div className="w-full text-[8px] font-normal ">

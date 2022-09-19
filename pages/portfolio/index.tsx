@@ -1,14 +1,14 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import PortfolioItems from "../../containers/portfolios/portfolioItems";
+import ProjectsItems from "../../containers/projects/projectItems";
 import { getAllProjects } from "../../datocms/queries";
 
 const Portfolio = ({ allProjects }: any) => {
   return (
     <>
       <Navbar />
-      <PortfolioItems allProjects={allProjects} />
+      <ProjectsItems allProjects={allProjects} />
       <Footer />
     </>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import PortfolioVideo from "../../containers/singlePortfolio/portfolioVideo";
-import PortfolioDetails from "../../containers/singlePortfolio/portfolioDetails";
+import ProjectVideo from "../../containers/singleProject/projectVideo";
+import ProjectDetails from "../../containers/singleProject/projectDetails";
 import { getAllProjects, getSingleProject } from "../../datocms/queries";
 
 const SinglePortfolio = ({ project }: any) => {
@@ -14,8 +14,8 @@ const SinglePortfolio = ({ project }: any) => {
     <>
       <Navbar />
       <div className="flex flex-col justify-center items-center py-7 bg-stone-800">
-        <PortfolioVideo project={project} />
-        <PortfolioDetails project={project} />
+        <ProjectVideo project={project} />
+        <ProjectDetails project={project} />
       </div>
       <Footer />
     </>

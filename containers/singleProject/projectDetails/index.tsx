@@ -1,7 +1,7 @@
 import React from "react";
 import ContactButton from "../../../components/contactButton";
 
-const PortfolioDetails = ({ project }: any) => {
+const ProjectDetails = ({ project }: any) => {
   if(!project) {
     return null;
   }
@@ -51,4 +51,4 @@ const PortfolioDetails = ({ project }: any) => {
   );
 };
 
-export default PortfolioDetails;
+export default ProjectDetails;

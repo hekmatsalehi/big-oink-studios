@@ -1,6 +1,6 @@
 import React from "react";
 
-const PortfolioVideo = ({ project }: any) => {
+const ProjectVideo = ({ project }: any) => {
   if(!project) {
     return null;
   }
@@ -17,4 +17,4 @@ const PortfolioVideo = ({ project }: any) => {
   );
 };
 
-export default PortfolioVideo;
+export default ProjectVideo;

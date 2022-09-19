@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const PortfolioItems = ({ allProjects }: any) => {
+const ProjectItems = ({ allProjects }: any) => {
   const projects = allProjects.allProjects;
   return (
     <div className="w-full bg-stone-800">
@@ -40,4 +40,4 @@ const PortfolioItems = ({ allProjects }: any) => {
   );
 };
 
-export default PortfolioItems;
+export default ProjectItems;

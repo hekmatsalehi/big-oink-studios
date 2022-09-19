@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 import Logo from "../logo";
-import subLogo from "../../public/homePageFooterSubLogo.png";
 import OtherPageLogo from "../otherPageLogo";
 
 const Footer = ({ type }: any) => {
@@ -22,16 +20,9 @@ const Footer = ({ type }: any) => {
             </span>
           </Link>
           <span className="text-xs font-semibold ml-11">
-            {type === "home" ? (
-              <Image
-                width="239"
-                height="17"
-                src={subLogo}
-                alt="Work hard, play hard, rest hard"
-              />
-            ) : (
-              "BRING HOME THE BACON"
-            )}
+            {type === "home"
+              ? "WORK HARD, PLAY HARD, REST HARD"
+              : "BRING HOME THE BACON"}
           </span>
         </div>
         <span className="text-sm font-normal text-[#7C7C7C]">

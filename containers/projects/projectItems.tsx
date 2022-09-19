@@ -19,7 +19,7 @@ const ProjectItems = ({ allProjects }: any) => {
               }
             >
               <div className="w-1/2">
-                <Image width="560" height="360" src={project.image.url} />
+                <Image width="560" height="360" src={project.image.url} alt={project.title} />
               </div>
               <div className="w-1/2 p-8">
                 <h1 className="text-3xl font-bold text-[#F3F3F3] ">

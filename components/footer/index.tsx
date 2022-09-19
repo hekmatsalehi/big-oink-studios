@@ -24,8 +24,8 @@ const Footer = ({ type }: any) => {
           <span className="text-xs font-semibold ml-11">
             {type === "home" ? (
               <Image
-                width="239px"
-                height="17px"
+                width={239}
+                height={17}
                 src={subLogo}
                 alt="Work hard, play hard, rest hard"
               />

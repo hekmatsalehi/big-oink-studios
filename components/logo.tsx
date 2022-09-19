@@ -4,7 +4,7 @@ import logo from "../public/logo.png";
 
 const Logo = () => {
   return (
-    <Image width="265px" height="34px" src={logo} alt="Noble Ocean Media" />
+    <Image width={265} height={34} src={logo} alt="Noble Ocean Media" />
   );
 };
 

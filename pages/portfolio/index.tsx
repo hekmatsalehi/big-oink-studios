@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../../containers/footer";
-import Navbar from "../../containers/navbar";
+import Footer from "../../components/footer";
+import Navbar from "../../components/navbar";
 import PortfolioItems from "../../containers/portfolios/portfolioItems";
 import { getAllProjects } from "../../datocms/queries";
 
